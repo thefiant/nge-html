@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Minha Página HTML</title>
+	<title>Imagem Interativa</title>
+	<style>
+		.container {
+			position: relative;
+			width: 500px;
+			height: 500px;
+			background-color: #EEE;
+			border: 1px solid #CCC;
+			overflow: hidden;
+		}
+		.container img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: all 0.3s ease;
+		}
+	</style>
 </head>
 <body>
-	<h1>Bem-vindo à Minha Página HTML</h1>
-	<p>Esta é uma página HTML básica criada como exemplo.</p>
-	<ul>
-		<li>Item 1</li>
-		<li>Item 2</li>
-		<li>Item 3</li>
-	</ul>
+	<div class="container" onmousemove="changeImage(event)">
+		<img id="image1" src="imagem1.jpg">
+		<img id="image2" src="imagem2.jpg">
+	</div>
+	<script src="script.js"></script>
 </body>
 </html>
